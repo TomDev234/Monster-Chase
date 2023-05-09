@@ -1,2 +1,2 @@
 # Monster-Chase
- Unity Beginner's Tutorial
+ Unity Starter Project
