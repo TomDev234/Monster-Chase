@@ -12,6 +12,7 @@ public class PlayerBehaviourScript : MonoBehaviour
     Animator animator;
     const string WALK_PARAMETER = "Walk";
     const string GROUND_TAG = "Ground";
+    const string MONSTER_TAG = "Monster";
     bool isGrounded = true;
 
     // Start is called before the first frame update
@@ -35,6 +36,18 @@ public class PlayerBehaviourScript : MonoBehaviour
         if (collision.gameObject.CompareTag(GROUND_TAG))
         {
             isGrounded = true;
+        }
+        if (collision.gameObject.CompareTag(MONSTER_TAG))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(MONSTER_TAG))
+        {
+            Destroy(gameObject);
         }
     }
 

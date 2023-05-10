@@ -18,10 +18,13 @@ public class CameraBehaviourScript : MonoBehaviour
     // makes the Camera move smoother, because the Player Position is already calculated
     void LateUpdate()
     {
-        cameraPosition = transform.position;
-        cameraPosition.x = playerTransform.position.x;
-        if (cameraPosition.x < minimumXPosition) cameraPosition.x = minimumXPosition;
-        if (cameraPosition.x > maximumXPosition) cameraPosition.x = maximumXPosition;
-        transform.position = cameraPosition;
+        if (playerTransform != null)
+        {
+            cameraPosition = transform.position;
+            cameraPosition.x = playerTransform.position.x;
+            if (cameraPosition.x < minimumXPosition) cameraPosition.x = minimumXPosition;
+            if (cameraPosition.x > maximumXPosition) cameraPosition.x = maximumXPosition;
+            transform.position = cameraPosition;
+        }
     }
 }

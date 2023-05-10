@@ -1,0 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CollectorBehaviourScript : MonoBehaviour
+{
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Monster") || collision.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+}

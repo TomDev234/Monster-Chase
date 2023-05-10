@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterBehaviourScript : MonoBehaviour
 {
-    [HideInInspector] public float speed = 5f;
+    [HideInInspector] public float speed;
     Rigidbody2D rigidBody;
 
     // Start is called before the first frame update
