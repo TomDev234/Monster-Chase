@@ -27,12 +27,12 @@ public class SpawnerBehaviourScript : MonoBehaviour
             if (randomSide == 0)
             {
                 spawnedMonster.transform.position = leftSpawnTransform.position;
-                spawnedMonster.GetComponent<MonsterBehaviourScript>().speed = Random.Range(4, 8);
+                spawnedMonster.GetComponent<MonsterBehaviourScript>().speed = Random.Range(4, 10);
             }
             else
             {
                 spawnedMonster.transform.position = rightSpawnTransform.position;
-                spawnedMonster.GetComponent<MonsterBehaviourScript>().speed = -Random.Range(4, 8);
+                spawnedMonster.GetComponent<MonsterBehaviourScript>().speed = -Random.Range(4, 10);
                 spawnedMonster.transform.localScale = new Vector3(-1f, 1f, 1f);
             }
         }
