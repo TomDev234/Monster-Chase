@@ -25,15 +25,15 @@ public sealed class GameManagerScript : MonoBehaviour
 
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += OnLevelFinishedLoaading;
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnLevelFinishedLoaading;
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
-    private void OnLevelFinishedLoaading(Scene scene, LoadSceneMode mode)
+    private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "Scene01")
         {
